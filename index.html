@@ -9,7 +9,7 @@
     content="Break into Canada's AML and compliance industry — no prior experience required. Join the waitlist for FinCareers, the bootcamp built for newcomers, fresh graduates, and career changers.">
   <meta property="og:title" content="FinCareers — Launch Your Compliance Career in Canada">
   <meta property="og:description"
-    content="No experience? No problem. Get job-ready for AML and compliance roles in Canada with FinCareers.">
+    content="Canada's only AML bootcamp built by active investigators. Go from zero to job-ready for compliance roles at Canada's Big 6 banks.">
   <meta property="og:image" content="/og-image.png">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://fincareers.ca">
@@ -335,6 +335,141 @@
       color: var(--gray-400);
       margin-top: 4px;
       display: block
+    }
+
+    /* HERO TAGS */
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px
+    }
+
+    .hero-tags span {
+      padding: 6px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(212, 168, 83, .3);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold);
+      background: rgba(212, 168, 83, .06)
+    }
+
+    /* BENEFITS STRIP */
+    .benefits-strip {
+      background: var(--off-white);
+      padding: 48px 0;
+      border-bottom: 1px solid var(--gray-200)
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center
+    }
+
+    .benefit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px
+    }
+
+    .benefit-item .benefit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px
+    }
+
+    .benefit-item .benefit-icon svg {
+      width: 22px;
+      height: 22px;
+      color: var(--gold)
+    }
+
+    .benefit-item h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy)
+    }
+
+    .benefit-item p {
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.5
+    }
+
+    /* PRICING */
+    .pricing-block {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px
+    }
+
+    .pricing-block .price-current {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 800;
+      color: var(--white)
+    }
+
+    .pricing-block .price-original {
+      font-size: 20px;
+      color: var(--gray-400);
+      text-decoration: line-through
+    }
+
+    .pricing-block .price-badge {
+      padding: 4px 12px;
+      border-radius: 50px;
+      background: rgba(212, 168, 83, .15);
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    .cohort-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 12px;
+      padding: 14px 24px;
+      margin-bottom: 28px;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .cohort-info .cohort-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gray-400);
+      font-weight: 600
+    }
+
+    .cohort-info .cohort-name {
+      font-size: 15px;
+      color: var(--gold);
+      font-weight: 600
+    }
+
+    .cohort-info .spots {
+      margin-left: auto;
+      font-size: 13px;
+      color: #ef4444;
+      font-weight: 700
     }
 
     /* AUDIENCE */
@@ -938,6 +1073,11 @@
         grid-template-columns: 1fr
       }
 
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px
+      }
+
       .footer-inner {
         flex-direction: column;
         text-align: center
@@ -969,6 +1109,20 @@
 
       .curr-grid {
         grid-template-columns: 1fr
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cohort-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px
+      }
+
+      .cohort-info .spots {
+        margin-left: 0
       }
     }
 
@@ -1055,20 +1209,64 @@
     <div class="hero-glow"></div>
     <div class="container hero-content">
       <div class="hero-badge"><span class="pulse"></span>Applications open · Next cohort — Canada</div>
-      <h1>Break into Canada's <span>Compliance Industry</span> — No Experience Required</h1>
-      <p class="hero-sub">Built for newcomers, fresh graduates, and career changers. Previous cohorts have placed
-        graduates at Canadian banks and fintechs.</p>
+      <h1>Canada's Only AML Bootcamp Built by <span>Active Investigators</span></h1>
+      <p class="hero-sub">For newcomers, immigrants relocating to Canada, and career changers. Go from zero to job-ready
+        with a curriculum built around FINTRAC, PCMLTFA, and what Canada's Big 6 banks actually hire for.</p>
+      <div class="hero-tags">
+        <span>FINTRAC Compliance</span>
+        <span>Newcomer → Canada Transition</span>
+        <span>AML &amp; KYC</span>
+        <span>Big 6 Bank Ready</span>
+        <span>Resume + Interview Prep</span>
+      </div>
       <form class="hero-form" id="heroForm" novalidate>
         <input type="email" placeholder="Enter your email address" required id="heroEmail" aria-label="Email address">
         <button type="submit">Join the Waitlist</button>
       </form>
-      <p class="hero-trust">Paid bootcamp · Founding member pricing available to waitlist members only · No spam</p>
+      <p class="hero-trust">Founding member pricing locked in · No spam · Unsubscribe anytime</p>
       <div class="hero-stats">
-        <div class="hero-stat"><span class="num">$65K+</span><span class="label">Starting salary in compliance roles
-            across Canada</span></div>
-        <div class="hero-stat"><span class="num">2,800+</span><span class="label">Open compliance roles in Canada right
-            now</span></div>
-        <div class="hero-stat"><span class="num">100%</span><span class="label">Focused on getting you job-ready</span>
+        <div class="hero-stat"><span class="num">$65K+</span><span class="label">Starting AML salary</span></div>
+        <div class="hero-stat"><span class="num">2,800+</span><span class="label">Open roles in Canada</span></div>
+        <div class="hero-stat"><span class="num">34%</span><span class="label">3-year job growth</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS STRIP -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-item reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <h4>Built for Canadian Banking</h4>
+          <p>FINTRAC, PCMLTFA, Big 6 context</p>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg></div>
+          <h4>International Credentials Bridged</h4>
+          <p>CAMS/ICA → Canadian regulatory framework</p>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <path d="M22 4L12 14.01l-3-3" />
+            </svg></div>
+          <h4>Taught by Active Investigators</h4>
+          <p>Not trainers — practitioners with 10+ years</p>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg></div>
+          <h4>Resume + Interview Included</h4>
+          <p>Real rewrites by hiring professionals</p>
         </div>
       </div>
     </div>
@@ -1374,22 +1572,35 @@
   <section class="final-cta" id="final-cta">
     <div class="hero-glow"></div>
     <div class="container final-cta-content reveal">
-      <h2>Ready to Make the Move?</h2>
-      <p class="sub">Waitlist members get founding member pricing — the lowest this programme will ever be.</p>
+      <h2>Reserve Your Spot</h2>
+      <p class="sub">Next cohort · Limited to 15 participants</p>
+      <div class="cohort-info">
+        <div>
+          <div class="cohort-label">Next Cohort</div>
+          <div class="cohort-name">Upcoming Intake</div>
+        </div>
+        <span class="spots">6 spots left</span>
+      </div>
+      <div class="pricing-block">
+        <span class="price-current">$800</span>
+        <span class="price-original">$1,000</span>
+        <span class="price-badge">20% OFF</span>
+      </div>
       <form class="final-form" id="finalForm" novalidate>
         <input type="email" placeholder="Your email address" required id="finalEmail" aria-label="Email address"
           name="email">
-        <select required id="finalSegment" aria-label="What best describes you?" name="segment">
-          <option value="" disabled selected>What best describes you?</option>
-          <option value="New to Canada">New to Canada</option>
+        <select required id="finalSegment" aria-label="I am a..." name="segment">
+          <option value="" disabled selected>I am a...</option>
+          <option value="Newcomer to Canada">Newcomer to Canada</option>
+          <option value="Immigrant Professional">Immigrant Professional</option>
           <option value="Fresh Graduate">Fresh Graduate</option>
-          <option value="Currently Job Searching">Currently Job Searching</option>
           <option value="Career Changer">Career Changer</option>
+          <option value="Currently Job Searching">Currently Job Searching</option>
           <option value="Other">Other</option>
         </select>
-        <button type="submit" class="cta-btn">Secure My Spot →</button>
+        <button type="submit" class="cta-btn">SECURE MY SPOT →</button>
       </form>
-      <p class="final-trust">Paid bootcamp · Founding pricing for waitlist only · Unsubscribe anytime</p>
+      <p class="final-trust">Founding member pricing locked in · No spam · Unsubscribe anytime</p>
       <p class="form-error" id="formError"></p>
       <div class="thank-you" id="thankYou">
         <h3>You're on the list ✓</h3>
