@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinCareers — Launch Your Compliance Career in Canada</title>
+  <meta name="description"
+    content="Break into Canada's AML and compliance industry — no prior experience required. Join the waitlist for FinCareers, the bootcamp built for newcomers, fresh graduates, and career changers.">
+  <meta property="og:title" content="FinCareers — Launch Your Compliance Career in Canada">
+  <meta property="og:description"
+    content="No experience? No problem. Get job-ready for AML and compliance roles in Canada with FinCareers.">
+  <meta property="og:image" content="/og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://fincareers.ca">
+  <!-- Google Analytics placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script> -->
+  <!-- Meta Pixel placeholder -->
+  <!-- <script>!function(f,b,e,v,n,t,s){...}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"FinCareers","url":"https://fincareers.ca","email":"hello@fincareers.ca","description":"Canadian compliance career bootcamp"}</script>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --navy: #0A1628;
+      --navy-light: #0f1f3a;
+      --navy-mid: #132744;
+      --gold: #D4A853;
+      --gold-light: #e4c47a;
+      --gold-dark: #b8903f;
+      --white: #FFFFFF;
+      --off-white: #F8F9FB;
+      --gray-100: #F1F3F6;
+      --gray-200: #E2E5EA;
+      --gray-300: #C5C9D2;
+      --gray-400: #9DA3AE;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+      --ease: cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--gray-700);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      font-family: inherit
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease)
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      transition: all .3s var(--ease)
+    }
+
+    .nav.scrolled {
+      background: rgba(10, 22, 40, .97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .nav-logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .nav-logo svg {
+      width: 28px;
+      height: 28px
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all .2s var(--ease)
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(212, 168, 83, .3)
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      background: var(--navy);
+      padding: 140px 0 80px;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(212, 168, 83, .06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 168, 83, .06) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(212, 168, 83, .12) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 168, 83, .12);
+      border: 1px solid rgba(212, 168, 83, .25);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 28px
+    }
+
+    .hero-badge .pulse {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.3)
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: 20px
+    }
+
+    .hero h1 span {
+      color: var(--gold)
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--gray-300);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.6
+    }
+
+    .hero-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto 12px;
+      flex-wrap: wrap
+    }
+
+    .hero-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 20px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      background: rgba(255, 255, 255, .07);
+      color: var(--white);
+      font-size: 15px;
+      outline: none;
+      transition: border .2s
+    }
+
+    .hero-form input::placeholder {
+      color: var(--gray-400)
+    }
+
+    .hero-form input:focus {
+      border-color: var(--gold)
+    }
+
+    .hero-form button {
+      padding: 14px 32px;
+      border-radius: 50px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      transition: all .2s var(--ease);
+      white-space: nowrap
+    }
+
+    .hero-form button:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(212, 168, 83, .3)
+    }
+
+    .hero-form button:disabled {
+      opacity: .7;
+      cursor: not-allowed;
+      transform: none
+    }
+
+    .hero-trust {
+      font-size: 13px;
+      color: var(--gray-400);
+      margin-bottom: 48px
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 600px;
+      margin: 0 auto
+    }
+
+    .hero-stat {
+      text-align: center
+    }
+
+    .hero-stat .num {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 800;
+      color: var(--gold);
+      display: block
+    }
+
+    .hero-stat .label {
+      font-size: 13px;
+      color: var(--gray-400);
+      margin-top: 4px;
+      display: block
+    }
+
+    /* AUDIENCE */
+    .audience {
+      background: var(--off-white);
+      padding: 96px 0
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-dark);
+      text-align: center;
+      margin-bottom: 12px
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      letter-spacing: -.015em;
+      margin-bottom: 16px
+    }
+
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray-500);
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 56px
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px
+    }
+
+    .audience-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 28px;
+      border: 1px solid var(--gray-200);
+      transition: all .3s var(--ease)
+    }
+
+    .audience-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(10, 22, 40, .08)
+    }
+
+    .audience-card .emoji {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block
+    }
+
+    .audience-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px
+    }
+
+    .audience-card .pain {
+      font-size: 15px;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+      line-height: 1.5
+    }
+
+    .audience-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .audience-card li {
+      font-size: 14px;
+      color: var(--gray-600);
+      padding-left: 22px;
+      position: relative
+    }
+
+    .audience-card li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold)
+    }
+
+    /* AML */
+    .aml {
+      background: var(--white);
+      padding: 96px 0
+    }
+
+    .aml-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center
+    }
+
+    .aml-text h2 {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.015em;
+      margin-bottom: 24px
+    }
+
+    .aml-text p {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 16px
+    }
+
+    .aml-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .aml-stat {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .aml-stat::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold)
+    }
+
+    .aml-stat .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px
+    }
+
+    .aml-stat .label {
+      font-size: 14px;
+      color: var(--gray-300);
+      line-height: 1.4
+    }
+
+    /* CURRICULUM */
+    .curriculum {
+      background: var(--off-white);
+      padding: 96px 0
+    }
+
+    .curr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px
+    }
+
+    .curr-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+      transition: all .3s var(--ease)
+    }
+
+    .curr-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold)
+    }
+
+    .curr-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(10, 22, 40, .06)
+    }
+
+    .curr-card .week {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold-dark);
+      margin-bottom: 8px
+    }
+
+    .curr-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px
+    }
+
+    .curr-card p {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.5
+    }
+
+    .curr-note {
+      font-size: 13px;
+      color: var(--gray-400);
+      text-align: center;
+      font-style: italic
+    }
+
+    /* WHY */
+    .why {
+      background: var(--white);
+      padding: 96px 0
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px
+    }
+
+    .why-item {
+      display: flex;
+      gap: 16px;
+      padding: 24px;
+      border-radius: 16px;
+      transition: background .2s
+    }
+
+    .why-item:hover {
+      background: var(--off-white)
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 12px;
+      background: rgba(212, 168, 83, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .why-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--gold-dark)
+    }
+
+    .why-item h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px
+    }
+
+    .why-item p {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.6
+    }
+
+    /* FAQ */
+    .faq {
+      background: var(--off-white);
+      padding: 96px 0
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: border-color .2s
+    }
+
+    .faq-item.open {
+      border-color: var(--gold)
+    }
+
+    .faq-q {
+      width: 100%;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: left;
+      transition: color .2s
+    }
+
+    .faq-q:hover {
+      color: var(--gold-dark)
+    }
+
+    .faq-q svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      transition: transform .3s var(--ease);
+      color: var(--gray-400)
+    }
+
+    .faq-item.open .faq-q svg {
+      transform: rotate(180deg);
+      color: var(--gold)
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s var(--ease)
+    }
+
+    .faq-a-inner {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--navy);
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden
+    }
+
+    .final-cta .hero-glow {
+      top: auto;
+      bottom: -30%
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto
+    }
+
+    .final-cta h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+      letter-spacing: -.015em
+    }
+
+    .final-cta .sub {
+      font-size: 17px;
+      color: var(--gray-300);
+      margin-bottom: 40px;
+      line-height: 1.6
+    }
+
+    .final-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 440px;
+      margin: 0 auto 16px
+    }
+
+    .final-form input,
+    .final-form select {
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      background: rgba(255, 255, 255, .07);
+      color: var(--white);
+      font-size: 15px;
+      font-family: var(--font);
+      outline: none;
+      transition: border .2s;
+      appearance: none;
+      -webkit-appearance: none
+    }
+
+    .final-form select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239DA3AE' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center
+    }
+
+    .final-form select option {
+      background: var(--navy);
+      color: var(--white)
+    }
+
+    .final-form input:focus,
+    .final-form select:focus {
+      border-color: var(--gold)
+    }
+
+    .final-form input::placeholder {
+      color: var(--gray-400)
+    }
+
+    .final-form .cta-btn {
+      padding: 16px 32px;
+      border-radius: 12px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 700;
+      transition: all .2s var(--ease)
+    }
+
+    .final-form .cta-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(212, 168, 83, .3)
+    }
+
+    .final-form .cta-btn:disabled {
+      opacity: .7;
+      cursor: not-allowed;
+      transform: none
+    }
+
+    .final-trust {
+      font-size: 13px;
+      color: var(--gray-400)
+    }
+
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 32px
+    }
+
+    .thank-you h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 12px
+    }
+
+    .thank-you p {
+      font-size: 16px;
+      color: var(--gray-300);
+      line-height: 1.6
+    }
+
+    .form-error {
+      color: #ef4444;
+      font-size: 13px;
+      margin-top: 8px;
+      display: none
+    }
+
+    /* MID-PAGE CTA STRIP */
+    .mid-cta {
+      background: var(--navy);
+      padding: 56px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .mid-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(212, 168, 83, .08) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .mid-cta p {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gray-300);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1
+    }
+
+    .mid-cta a {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 50px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      transition: all .2s var(--ease);
+      position: relative;
+      z-index: 1
+    }
+
+    .mid-cta a:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(212, 168, 83, .3)
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 40px 0
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px
+    }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white)
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      font-size: 13px
+    }
+
+    .footer-links a {
+      color: var(--gray-400);
+      transition: color .2s
+    }
+
+    .footer-links a:hover {
+      color: var(--gold)
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--gray-400);
+      width: 100%;
+      text-align: center;
+      margin-top: 16px
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+      .hero {
+        padding: 120px 0 60px
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px
+      }
+
+      .aml-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center
+      }
+    }
+
+    @media(max-width:480px) {
+      .container {
+        padding: 0 16px
+      }
+
+      .hero-form {
+        flex-direction: column
+      }
+
+      .hero-form input,
+      .hero-form button {
+        width: 100%
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr
+      }
+
+      .curr-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .hero-content>* {
+      animation: fadeInUp .8s var(--ease) both
+    }
+
+    .hero-content>*:nth-child(1) {
+      animation-delay: .1s
+    }
+
+    .hero-content>*:nth-child(2) {
+      animation-delay: .2s
+    }
+
+    .hero-content>*:nth-child(3) {
+      animation-delay: .3s
+    }
+
+    .hero-content>*:nth-child(4) {
+      animation-delay: .4s
+    }
+
+    .hero-content>*:nth-child(5) {
+      animation-delay: .5s
+    }
+
+    .hero-content>*:nth-child(6) {
+      animation-delay: .6s
+    }
+
+    .hero-content>*:nth-child(7) {
+      animation-delay: .7s
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#final-cta" class="sr-only"
+    style="position:fixed;top:0;left:0;z-index:999;background:var(--gold);color:var(--navy);padding:12px 24px;border-radius:0 0 8px 0"
+    onfocus="this.style.clip='auto';this.style.width='auto';this.style.height='auto'"
+    onblur="this.style.clip='rect(0,0,0,0)';this.style.width='1px';this.style.height='1px'">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <svg viewBox="0 0 28 28" fill="none">
+          <path d="M14 2L26 8v12l-12 6L2 20V8l12-6z" stroke="#D4A853" stroke-width="2" />
+          <path d="M14 8v12M8 11l6 3 6-3" stroke="#D4A853" stroke-width="1.5" />
+        </svg>
+        FinCareers
+      </a>
+      <a href="#final-cta" class="nav-cta">Join the Waitlist</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-badge"><span class="pulse"></span>Applications open · Next cohort — Canada</div>
+      <h1>Break into Canada's <span>Compliance Industry</span> — No Experience Required</h1>
+      <p class="hero-sub">Built for newcomers, fresh graduates, and career changers. Previous cohorts have placed
+        graduates at Canadian banks and fintechs.</p>
+      <form class="hero-form" id="heroForm" novalidate>
+        <input type="email" placeholder="Enter your email address" required id="heroEmail" aria-label="Email address">
+        <button type="submit">Join the Waitlist</button>
+      </form>
+      <p class="hero-trust">Paid bootcamp · Founding member pricing available to waitlist members only · No spam</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">$65K+</span><span class="label">Starting salary in compliance roles
+            across Canada</span></div>
+        <div class="hero-stat"><span class="num">2,800+</span><span class="label">Open compliance roles in Canada right
+            now</span></div>
+        <div class="hero-stat"><span class="num">100%</span><span class="label">Focused on getting you job-ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section class="audience" id="audience">
+    <div class="container">
+      <p class="section-label reveal">Who This Is For</p>
+      <h2 class="section-title reveal">Does This Sound Like You?</h2>
+      <p class="section-sub reveal">You're ambitious, driven, and ready for a real career — you just need the right
+        path.</p>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <span class="emoji">🌍</span>
+          <h3>New to Canada</h3>
+          <p class="pain">Your credentials aren't recognised here, and every job posting demands "Canadian experience"
+            you can't get without a job.</p>
+          <ul>
+            <li>Foreign qualifications going to waste</li>
+            <li>Stuck in survival jobs below your skill level</li>
+            <li>No clear path into the Canadian financial sector</li>
+          </ul>
+        </div>
+        <div class="audience-card reveal">
+          <span class="emoji">🎓</span>
+          <h3>Fresh Graduate</h3>
+          <p class="pain">You have the degree, but every entry-level role wants 2+ years of experience. It feels like a
+            rigged system.</p>
+          <ul>
+            <li>Finance or business degree gathering dust</li>
+            <li>Competing with hundreds of identical applicants</li>
+            <li>No specialisation that makes you stand out</li>
+          </ul>
+        </div>
+        <div class="audience-card reveal">
+          <span class="emoji">🔄</span>
+          <h3>Career Changer</h3>
+          <p class="pain">You're stuck in the wrong industry with no upward mobility, and you don't know where to start
+            over.</p>
+          <ul>
+            <li>No direction or structured career pathway</li>
+            <li>Overwhelmed by options that don't lead anywhere</li>
+            <li>Need something stable, growing, and achievable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AML -->
+  <section class="aml" id="aml">
+    <div class="container">
+      <div class="aml-grid">
+        <div class="aml-text reveal">
+          <p class="section-label" style="text-align:left">The Opportunity</p>
+          <h2>What Is AML?</h2>
+          <p>Anti-Money Laundering (AML) is how banks and financial institutions prevent criminal money from flowing
+            through the financial system. Every bank in Canada is legally required to have AML compliance teams — and
+            they're hiring.</p>
+          <p>The best part? You don't need a finance degree to start. AML analysts come from all backgrounds — what
+            matters is training, attention to detail, and understanding how the Canadian regulatory system works.</p>
+          <p>With FINTRAC (Canada's financial intelligence unit) tightening regulations, the demand for qualified
+            compliance professionals has never been higher.</p>
+        </div>
+        <div class="aml-stats reveal">
+          <div class="aml-stat"><span class="num">34%</span><span class="label">AML job growth in Canada (3-year
+              trend)</span></div>
+          <div class="aml-stat"><span class="num">$85K</span><span class="label">Senior AML analyst average
+              salary</span></div>
+          <div class="aml-stat"><span class="num">Big 6</span><span class="label">All major Canadian banks actively
+              hiring compliance staff</span></div>
+          <div class="aml-stat"><span class="num">FINTRAC</span><span class="label">Mandatory compliance framework
+              across Canada</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="curriculum" id="curriculum">
+    <div class="container">
+      <p class="section-label reveal">The Programme</p>
+      <h2 class="section-title reveal">What You'll Learn</h2>
+      <p class="section-sub reveal">A structured pathway from zero compliance knowledge to job-ready AML professional.
+      </p>
+      <div class="curr-grid">
+        <div class="curr-card reveal">
+          <p class="week">Module 1</p>
+          <h3>AML Foundations</h3>
+          <p>Understand what money laundering is, why it matters, and how Canada's regulatory framework is structured.
+          </p>
+        </div>
+        <div class="curr-card reveal">
+          <p class="week">Module 2</p>
+          <h3>KYC &amp; Due Diligence</h3>
+          <p>Learn how banks verify customer identities and assess risk — the core skill every compliance team needs.
+          </p>
+        </div>
+        <div class="curr-card reveal">
+          <p class="week">Module 3</p>
+          <h3>Transaction Monitoring</h3>
+          <p>Detect suspicious transactions, understand typologies, and learn the tools analysts use daily.</p>
+        </div>
+        <div class="curr-card reveal">
+          <p class="week">Module 4</p>
+          <h3>Canadian Banking Context</h3>
+          <p>Deep dive into FINTRAC, PCMLTFA, and how the Big 6 Canadian banks structure their compliance operations.
+          </p>
+        </div>
+        <div class="curr-card reveal">
+          <p class="week">Module 5</p>
+          <h3>Job Placement Prep</h3>
+          <p>Build your compliance resume, practise interview scenarios, and learn what Canadian hiring managers test
+            for.</p>
+        </div>
+        <div class="curr-card reveal">
+          <p class="week">Module 6</p>
+          <h3>Certification Support (CAMS)</h3>
+          <p>Prepare for industry-recognised certifications that put you ahead of other entry-level candidates.</p>
+        </div>
+      </div>
+      <p class="curr-note">Curriculum shown is indicative. Final curriculum confirmed with each cohort intake.</p>
+    </div>
+  </section>
+
+  <!-- WHY FINCAREERS -->
+  <section class="why" id="why">
+    <div class="container">
+      <p class="section-label reveal">The Difference</p>
+      <h2 class="section-title reveal">Why FinCareers</h2>
+      <p class="section-sub reveal">This isn't another generic online course. Here's what makes the programme different.
+      </p>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div>
+            <h3>Canada-Specific Curriculum</h3>
+            <p>Built around FINTRAC, PCMLTFA, and Big 6 banking context — not generic international content that doesn't
+              apply here.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <path d="M22 4L12 14.01l-3-3" />
+            </svg></div>
+          <div>
+            <h3>Zero Experience Required</h3>
+            <p>Designed for absolute beginners. No finance degree, no compliance background, no prior certifications
+              needed to start.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg></div>
+          <div>
+            <h3>Outcome-Focused, Not Theory-Heavy</h3>
+            <p>Every module maps to what hiring managers actually test for. You'll learn to do the job, not just study
+              about it.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg></div>
+          <div>
+            <h3>Immigrant-Friendly</h3>
+            <p>Helps newcomers translate existing strengths into compliance language that Canadian employers understand
+              and value.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+            </svg></div>
+          <div>
+            <h3>Live Cohort + Community</h3>
+            <p>Not a passive video course. Learn alongside peers, get real-time support, and build your professional
+              network from day one.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="13 17 18 12 13 7" />
+              <polyline points="6 17 11 12 6 7" />
+            </svg></div>
+          <div>
+            <h3>Expandable Career Path</h3>
+            <p>AML is just the start. KYC, fraud, FINTRAC specialisation, and more tracks are coming — grow your career
+              with us.</p>
+          </div>
+        </div>
+      </div>
+      <p class="reveal"
+        style="text-align:center;font-size:15px;color:var(--gray-500);margin-top:40px;font-style:italic">Built by
+        compliance professionals with hiring experience at Canadian banks.</p>
+    </div>
+  </section>
+
+  <!-- MID-PAGE CTA STRIP -->
+  <section class="mid-cta reveal">
+    <div class="container">
+      <p>Spots for the next cohort are limited.</p>
+      <a href="#final-cta">Join the Waitlist →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <p class="section-label reveal">Common Questions</p>
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <p class="section-sub reveal">Everything you need to know before joining the waitlist.</p>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need any prior finance or
+            compliance experience?<svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg></button>
+          <div class="faq-a">
+            <div class="faq-a-inner">No. FinCareers is built from the ground up for people with zero compliance
+              experience. Whether you come from retail, hospitality, accounting, or any other background — the programme
+              starts from scratch and takes you to job-ready.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">I'm a newcomer to Canada. Will this help
+            me specifically?<svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg></button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Absolutely. A significant portion of our curriculum is designed specifically for
+              newcomers. You'll learn the Canadian regulatory landscape, understand how Big 6 banks operate, and build
+              the "Canadian experience" that employers look for — without needing a Canadian job first.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long is the bootcamp and what's the
+            format?<svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg></button>
+          <div class="faq-a">
+            <div class="faq-a-inner">The programme is delivered in a live cohort format. You'll work through
+              structured modules with live sessions, practical exercises, and community support. It's designed to be
+              completed alongside a full-time job or other commitments. Exact programme length will be confirmed with
+              your cohort intake.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How much will it cost?<svg
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg></button>
+          <div class="faq-a">
+            <div class="faq-a-inner">FinCareers is a paid professional bootcamp. Exact pricing will be announced to
+              waitlist members first — and founding members will receive a significant discount not available after
+              launch. Join the waitlist to be first in line.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Will this help me get a job at a
+            Canadian bank?<svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg></button>
+          <div class="faq-a">
+            <div class="faq-a-inner">That's the goal. The entire curriculum — from AML foundations to job placement prep
+              — is designed with Canadian bank hiring standards in mind. Previous cohorts have placed graduates at major
+              banks and fintechs across Canada. We don't just teach theory; we prepare you for the exact interviews and
+              assessments you'll face.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What if I join the waitlist but the
+            cohort doesn't run?<svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg></button>
+          <div class="faq-a">
+            <div class="faq-a-inner">The waitlist is free and no-commitment. If for any reason the cohort doesn't
+              proceed, you'll be the first to know about alternative options. Your email is never shared, and you can
+              unsubscribe anytime with one click.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="final-cta">
+    <div class="hero-glow"></div>
+    <div class="container final-cta-content reveal">
+      <h2>Ready to Make the Move?</h2>
+      <p class="sub">Waitlist members get founding member pricing — the lowest this programme will ever be.</p>
+      <form class="final-form" id="finalForm" novalidate>
+        <input type="email" placeholder="Your email address" required id="finalEmail" aria-label="Email address"
+          name="email">
+        <select required id="finalSegment" aria-label="What best describes you?" name="segment">
+          <option value="" disabled selected>What best describes you?</option>
+          <option value="New to Canada">New to Canada</option>
+          <option value="Fresh Graduate">Fresh Graduate</option>
+          <option value="Currently Job Searching">Currently Job Searching</option>
+          <option value="Career Changer">Career Changer</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit" class="cta-btn">Secure My Spot →</button>
+      </form>
+      <p class="final-trust">Paid bootcamp · Founding pricing for waitlist only · Unsubscribe anytime</p>
+      <p class="form-error" id="formError"></p>
+      <div class="thank-you" id="thankYou">
+        <h3>You're on the list ✓</h3>
+        <p>We'll be in touch with cohort details and your founding member pricing shortly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">FinCareers</span>
+        <div class="footer-links">
+          <a href="mailto:hello@fincareers.ca">hello@fincareers.ca</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <p class="footer-copy">© 2026 FinCareers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Scroll reveal (IntersectionObserver)
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-a');
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-a').style.maxHeight = '0';
+      });
+      // Open clicked (if was closed)
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+
+    // Hero form: scroll to final CTA + prefill email
+    document.getElementById('heroForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('heroEmail').value.trim();
+      if (!email || !email.includes('@')) return;
+      document.getElementById('finalEmail').value = email;
+      document.getElementById('final-cta').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => document.getElementById('finalSegment').focus(), 800);
+    });
+
+    // Final form: submit to Formspree
+    // SETUP: Create a form at https://formspree.io linked to taqhausinc@gmail.com
+    const FORMSPREE_URL = 'https://formspree.io/f/mzdjdnnb';
+
+    document.getElementById('finalForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const emailEl = document.getElementById('finalEmail');
+      const segEl = document.getElementById('finalSegment');
+      const btn = this.querySelector('.cta-btn');
+      const errEl = document.getElementById('formError');
+      errEl.style.display = 'none';
+
+      const email = emailEl.value.trim();
+      const segment = segEl.value;
+
+      if (!email || !email.includes('@')) { emailEl.focus(); return; }
+      if (!segment) { segEl.focus(); return; }
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      try {
+        const res = await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email, segment, _replyto: email })
+        });
+        if (res.ok) {
+          document.getElementById('finalForm').style.display = 'none';
+          document.querySelector('.final-trust').style.display = 'none';
+          document.getElementById('thankYou').style.display = 'block';
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        errEl.textContent = 'Something went wrong. Please try again.';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Secure My Spot →';
+      }
+    });
+  </script>
+</body>
+
+</html>
