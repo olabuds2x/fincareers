@@ -88,6 +88,25 @@
       opacity: 1;
       transform: translateY(0)
     }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.025);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(212, 175, 53, 0.08);
+    }
+
+    .btn-glow:hover {
+      box-shadow: 0 4px 24px rgba(212, 175, 53, 0.25);
+    }
   </style>
 </head>
 
@@ -149,7 +168,7 @@
             <input type="email" placeholder="Enter your email" required id="heroEmail" aria-label="Email address"
               class="flex-1 min-w-0 px-5 py-4 rounded bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30">
             <button type="submit"
-              class="bg-primary text-background-dark px-8 py-4 text-sm font-bold rounded hover:scale-[1.02] transition-transform whitespace-nowrap">
+              class="bg-primary text-background-dark px-8 py-4 text-sm font-bold rounded btn-glow hover:scale-[1.02] transition-all whitespace-nowrap">
               JOIN WAITLIST
             </button>
           </form>
@@ -158,60 +177,58 @@
       </div>
     </section>
 
-    <!-- Stats Strip -->
-    <section class="py-16 border-y border-white/5 bg-background-dark/50">
-      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-        <div class="text-center md:text-left reveal">
-          <p class="text-primary text-sm font-bold tracking-[0.2em] mb-2 uppercase">Starting Salary</p>
-          <h3 class="text-4xl font-bold text-white">$65K+</h3>
-        </div>
-        <div class="text-center md:text-left reveal">
-          <p class="text-primary text-sm font-bold tracking-[0.2em] mb-2 uppercase">Open Roles in Canada</p>
-          <h3 class="text-4xl font-bold text-white">2,800+</h3>
-        </div>
-        <div class="text-center md:text-left reveal">
-          <p class="text-primary text-sm font-bold tracking-[0.2em] mb-2 uppercase">3-Year Job Growth</p>
-          <h3 class="text-4xl font-bold text-white">34%</h3>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefits Strip -->
-    <section class="py-12 border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div class="flex items-start gap-4 reveal">
-          <span class="material-symbols-outlined text-primary text-2xl mt-0.5">location_on</span>
-          <div>
-            <h4 class="text-white font-bold text-sm mb-1">Built for Canadian Banking</h4>
-            <p class="text-slate-500 text-xs">FINTRAC, PCMLTFA, Big 6 context</p>
+    <!-- Social Proof Strip -->
+    <section class="py-16 border-y border-white/5 bg-gradient-to-b from-background-dark/80 to-[#1a1914]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-12 mb-12">
+          <div class="text-center md:text-left reveal">
+            <p class="text-primary text-xs font-bold tracking-[0.2em] mb-2 uppercase">Starting Salary</p>
+            <h3 class="text-5xl font-bold text-white">$65K+</h3>
+          </div>
+          <div class="text-center md:text-left reveal">
+            <p class="text-primary text-xs font-bold tracking-[0.2em] mb-2 uppercase">Open Roles in Canada</p>
+            <h3 class="text-5xl font-bold text-white">2,800+</h3>
+          </div>
+          <div class="text-center md:text-left reveal">
+            <p class="text-primary text-xs font-bold tracking-[0.2em] mb-2 uppercase">3-Year Job Growth</p>
+            <h3 class="text-5xl font-bold text-white">34%</h3>
           </div>
         </div>
-        <div class="flex items-start gap-4 reveal">
-          <span class="material-symbols-outlined text-primary text-2xl mt-0.5">language</span>
-          <div>
-            <h4 class="text-white font-bold text-sm mb-1">International Credentials Bridged</h4>
-            <p class="text-slate-500 text-xs">CAMS/ICA → Canadian regulatory framework</p>
+        <div class="border-t border-white/5 pt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div class="flex items-start gap-4 reveal">
+            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">location_on</span>
+            <div>
+              <h4 class="text-white font-bold text-sm mb-1">Built for Canadian Banking</h4>
+              <p class="text-slate-500 text-xs">FINTRAC, PCMLTFA, Big 6 context</p>
+            </div>
           </div>
-        </div>
-        <div class="flex items-start gap-4 reveal">
-          <span class="material-symbols-outlined text-primary text-2xl mt-0.5">verified_user</span>
-          <div>
-            <h4 class="text-white font-bold text-sm mb-1">Taught by Active Investigators</h4>
-            <p class="text-slate-500 text-xs">Not trainers — practitioners with 10+ years</p>
+          <div class="flex items-start gap-4 reveal">
+            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">language</span>
+            <div>
+              <h4 class="text-white font-bold text-sm mb-1">International Credentials Bridged</h4>
+              <p class="text-slate-500 text-xs">CAMS/ICA → Canadian regulatory framework</p>
+            </div>
           </div>
-        </div>
-        <div class="flex items-start gap-4 reveal">
-          <span class="material-symbols-outlined text-primary text-2xl mt-0.5">edit_document</span>
-          <div>
-            <h4 class="text-white font-bold text-sm mb-1">Resume + Interview Included</h4>
-            <p class="text-slate-500 text-xs">Real rewrites by hiring professionals</p>
+          <div class="flex items-start gap-4 reveal">
+            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">verified_user</span>
+            <div>
+              <h4 class="text-white font-bold text-sm mb-1">Taught by Active Investigators</h4>
+              <p class="text-slate-500 text-xs">Not trainers — practitioners with 10+ years</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 reveal">
+            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">edit_document</span>
+            <div>
+              <h4 class="text-white font-bold text-sm mb-1">Resume + Interview Included</h4>
+              <p class="text-slate-500 text-xs">Real rewrites by hiring professionals</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Does This Sound Like You? -->
-    <section class="py-32 bg-background-dark" id="audience">
+    <section class="py-32 bg-gradient-to-b from-background-dark to-[#1a1914]" id="audience">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20">
           <p class="text-primary text-sm font-bold tracking-[0.2em] mb-4 uppercase reveal">Who This Is For</p>
@@ -222,12 +239,12 @@
         </div>
         <div class="grid md:grid-cols-3 gap-8">
           <!-- New to Canada -->
-          <div
-            class="p-10 border border-white/5 bg-background-dark/40 rounded hover:border-primary/30 transition-all group reveal">
+          <div class="p-10 border border-white/5 glass-card card-hover rounded-lg hover:border-primary/30 group reveal">
             <span
               class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform">public</span>
             <h3 class="text-xl font-bold text-white mb-4">New to Canada</h3>
-            <p class="text-slate-400 font-light leading-relaxed mb-6 text-sm">Your credentials aren't recognised here,
+            <p class="text-slate-400 font-light leading-relaxed mb-6 text-[15px]">Your credentials aren't recognised
+              here,
               and every job posting demands "Canadian experience" you can't get without a job.</p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3 text-sm text-slate-500"><span
@@ -243,12 +260,12 @@
             </ul>
           </div>
           <!-- Fresh Graduate -->
-          <div
-            class="p-10 border border-white/5 bg-background-dark/40 rounded hover:border-primary/30 transition-all group reveal">
+          <div class="p-10 border border-white/5 glass-card card-hover rounded-lg hover:border-primary/30 group reveal">
             <span
               class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform">school</span>
             <h3 class="text-xl font-bold text-white mb-4">Fresh Graduate</h3>
-            <p class="text-slate-400 font-light leading-relaxed mb-6 text-sm">You have the degree, but every entry-level
+            <p class="text-slate-400 font-light leading-relaxed mb-6 text-[15px]">You have the degree, but every
+              entry-level
               role wants 2+ years of experience. It feels like a rigged system.</p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3 text-sm text-slate-500"><span
@@ -263,12 +280,12 @@
             </ul>
           </div>
           <!-- Career Changer -->
-          <div
-            class="p-10 border border-white/5 bg-background-dark/40 rounded hover:border-primary/30 transition-all group reveal">
+          <div class="p-10 border border-white/5 glass-card card-hover rounded-lg hover:border-primary/30 group reveal">
             <span
               class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform">work</span>
             <h3 class="text-xl font-bold text-white mb-4">Career Changer</h3>
-            <p class="text-slate-400 font-light leading-relaxed mb-6 text-sm">You're stuck in the wrong industry with no
+            <p class="text-slate-400 font-light leading-relaxed mb-6 text-[15px]">You're stuck in the wrong industry
+              with no
               upward mobility, and you don't know where to start over.</p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3 text-sm text-slate-500"><span
@@ -287,13 +304,13 @@
     </section>
 
     <!-- What is AML? -->
-    <section class="py-32 bg-background-dark border-t border-white/5" id="aml">
+    <section class="py-32 bg-gradient-to-b from-[#1a1914] to-background-dark border-t border-white/5" id="aml">
       <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
         <div class="relative reveal">
           <img alt="Financial District"
-            class="rounded shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+            class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBydndg7KG-Jk5SE10N4tewmFaVXqcV2EiooZo3X0F6-X-yipdrZ9bvvp2XDV4JJ-DV7g6_-wn2Zwsz-_ZupPYCM_DhA4lcEgZOqr1cMxgJEycUpn7rtGODFhs69UPJQcoXDS6RdP6m8l8xEfJiBGFVMXu-aCMwkBQ0TuyHvrOtKylirb9iyYfyGVlbxcEAV-qNpIewtEAwHJxVn8qzkht6bUzbW6sd7sV25cbzohwME3T6l2hjWtXa6AQGZVmx-ggqFx1ezTvY-QjP" />
-          <div class="absolute -bottom-8 -right-8 bg-primary p-10 hidden md:block">
+          <div class="absolute -bottom-8 -right-8 bg-primary p-10 rounded-lg hidden md:block shadow-lg">
             <p class="text-background-dark font-black text-5xl italic leading-none">34%</p>
             <p class="text-background-dark text-xs font-bold tracking-widest mt-2 uppercase">Job Growth</p>
           </div>
@@ -301,26 +318,19 @@
         <div>
           <p class="text-primary text-sm font-bold tracking-[0.2em] mb-4 uppercase reveal">The Opportunity</p>
           <h2 class="serif-heading text-4xl md:text-5xl text-white mb-8 reveal">What Is AML?</h2>
-          <p class="text-slate-400 font-light leading-relaxed mb-4 reveal">
-            Anti-Money Laundering (AML) is how banks and financial institutions prevent criminal money from flowing
-            through the financial system. Every bank in Canada is legally required to have AML compliance teams — and
-            they're hiring.
-          </p>
-          <p class="text-slate-400 font-light leading-relaxed mb-4 reveal">
-            The best part? You don't need a finance degree to start. AML analysts come from all backgrounds — what
-            matters is training, attention to detail, and understanding how the Canadian regulatory system works.
-          </p>
-          <p class="text-slate-400 font-light leading-relaxed mb-8 reveal">
-            With FINTRAC (Canada's financial intelligence unit) tightening regulations, the demand for qualified
-            compliance professionals has never been higher.
+          <p class="text-slate-400 font-light leading-relaxed mb-8 text-base reveal">
+            Anti-Money Laundering (AML) is how banks prevent criminal money from entering the financial system. Every
+            Canadian bank is legally required to have AML compliance teams — and they're actively hiring. You don't need
+            a finance degree: AML analysts come from all backgrounds. With FINTRAC tightening regulations, demand for
+            qualified compliance professionals has never been higher.
           </p>
           <div class="grid grid-cols-2 gap-4 reveal">
-            <div class="p-6 border border-white/5 rounded">
+            <div class="p-6 border border-white/5 rounded-lg glass-card card-hover">
               <p class="text-primary text-xs font-bold tracking-widest uppercase mb-1">Senior Pay</p>
               <p class="text-3xl font-bold text-white">$85K</p>
               <p class="text-slate-500 text-xs mt-1">Senior AML analyst average</p>
             </div>
-            <div class="p-6 border border-white/5 rounded">
+            <div class="p-6 border border-white/5 rounded-lg glass-card card-hover">
               <p class="text-primary text-xs font-bold tracking-widest uppercase mb-1">Demand</p>
               <p class="text-3xl font-bold text-white">Big 6</p>
               <p class="text-slate-500 text-xs mt-1">All major banks hiring compliance</p>
@@ -331,7 +341,7 @@
     </section>
 
     <!-- Curriculum -->
-    <section class="py-32 bg-background-dark/20 border-t border-white/5" id="curriculum">
+    <section class="py-32 bg-gradient-to-b from-background-dark to-[#1a1914] border-t border-white/5" id="curriculum">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div class="max-w-2xl">
@@ -341,40 +351,40 @@
           <p class="text-slate-500 max-w-sm reveal">A structured pathway from zero compliance knowledge to job-ready AML
             professional.</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-          <div class="relative pl-12 reveal">
-            <span class="absolute left-0 top-0 text-primary/30 text-3xl font-bold serif-heading">01</span>
-            <h4 class="text-white text-lg font-bold mb-3">AML Foundations</h4>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-8 reveal">
+            <span class="text-primary/30 text-3xl font-bold serif-heading">01</span>
+            <h4 class="text-white text-lg font-bold mb-3 mt-2">AML Foundations</h4>
             <p class="text-slate-400 text-sm leading-relaxed">Understand what money laundering is, why it matters, and
               how Canada's regulatory framework is structured.</p>
           </div>
-          <div class="relative pl-12 reveal">
-            <span class="absolute left-0 top-0 text-primary/30 text-3xl font-bold serif-heading">02</span>
-            <h4 class="text-white text-lg font-bold mb-3">KYC &amp; Due Diligence</h4>
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-8 reveal">
+            <span class="text-primary/30 text-3xl font-bold serif-heading">02</span>
+            <h4 class="text-white text-lg font-bold mb-3 mt-2">KYC &amp; Due Diligence</h4>
             <p class="text-slate-400 text-sm leading-relaxed">Learn how banks verify customer identities and assess risk
               — the core skill every compliance team needs.</p>
           </div>
-          <div class="relative pl-12 reveal">
-            <span class="absolute left-0 top-0 text-primary/30 text-3xl font-bold serif-heading">03</span>
-            <h4 class="text-white text-lg font-bold mb-3">Transaction Monitoring</h4>
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-8 reveal">
+            <span class="text-primary/30 text-3xl font-bold serif-heading">03</span>
+            <h4 class="text-white text-lg font-bold mb-3 mt-2">Transaction Monitoring</h4>
             <p class="text-slate-400 text-sm leading-relaxed">Detect suspicious transactions, understand typologies, and
               learn the tools analysts use daily.</p>
           </div>
-          <div class="relative pl-12 reveal">
-            <span class="absolute left-0 top-0 text-primary/30 text-3xl font-bold serif-heading">04</span>
-            <h4 class="text-white text-lg font-bold mb-3">Canadian Banking Context</h4>
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-8 reveal">
+            <span class="text-primary/30 text-3xl font-bold serif-heading">04</span>
+            <h4 class="text-white text-lg font-bold mb-3 mt-2">Canadian Banking Context</h4>
             <p class="text-slate-400 text-sm leading-relaxed">Deep dive into FINTRAC, PCMLTFA, and how the Big 6
               Canadian banks structure their compliance operations.</p>
           </div>
-          <div class="relative pl-12 reveal">
-            <span class="absolute left-0 top-0 text-primary/30 text-3xl font-bold serif-heading">05</span>
-            <h4 class="text-white text-lg font-bold mb-3">Job Placement Prep</h4>
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-8 reveal">
+            <span class="text-primary/30 text-3xl font-bold serif-heading">05</span>
+            <h4 class="text-white text-lg font-bold mb-3 mt-2">Job Placement Prep</h4>
             <p class="text-slate-400 text-sm leading-relaxed">Build your compliance resume, practise interview
               scenarios, and learn what Canadian hiring managers test for.</p>
           </div>
-          <div class="relative pl-12 reveal">
-            <span class="absolute left-0 top-0 text-primary/30 text-3xl font-bold serif-heading">06</span>
-            <h4 class="text-white text-lg font-bold mb-3">Certification Support (CAMS)</h4>
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-8 reveal">
+            <span class="text-primary/30 text-3xl font-bold serif-heading">06</span>
+            <h4 class="text-white text-lg font-bold mb-3 mt-2">Certification Support (CAMS)</h4>
             <p class="text-slate-400 text-sm leading-relaxed">Prepare for industry-recognised certifications that put
               you ahead of other entry-level candidates.</p>
           </div>
@@ -385,7 +395,7 @@
     </section>
 
     <!-- Why FinCareers -->
-    <section class="py-32 bg-background-dark border-t border-white/5" id="why">
+    <section class="py-32 bg-gradient-to-b from-[#1a1914] to-background-dark border-t border-white/5" id="why">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20">
           <p class="text-primary text-sm font-bold tracking-[0.2em] mb-4 uppercase reveal">The Difference</p>
@@ -394,8 +404,8 @@
             the programme different.</p>
           <div class="w-20 h-1 bg-primary mx-auto mt-8"></div>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <div class="flex gap-5 reveal">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-6 flex gap-5 reveal">
             <span class="material-symbols-outlined text-primary text-2xl mt-1 flex-shrink-0">map</span>
             <div>
               <h4 class="text-white font-bold mb-2">Canada-Specific Curriculum</h4>
@@ -403,7 +413,7 @@
                 not generic international content that doesn't apply here.</p>
             </div>
           </div>
-          <div class="flex gap-5 reveal">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-6 flex gap-5 reveal">
             <span class="material-symbols-outlined text-primary text-2xl mt-1 flex-shrink-0">verified_user</span>
             <div>
               <h4 class="text-white font-bold mb-2">Zero Experience Required</h4>
@@ -411,7 +421,7 @@
                 compliance background, no prior certifications needed to start.</p>
             </div>
           </div>
-          <div class="flex gap-5 reveal">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-6 flex gap-5 reveal">
             <span class="material-symbols-outlined text-primary text-2xl mt-1 flex-shrink-0">work</span>
             <div>
               <h4 class="text-white font-bold mb-2">Outcome-Focused, Not Theory-Heavy</h4>
@@ -419,7 +429,7 @@
                 You'll learn to do the job, not just study about it.</p>
             </div>
           </div>
-          <div class="flex gap-5 reveal">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-6 flex gap-5 reveal">
             <span class="material-symbols-outlined text-primary text-2xl mt-1 flex-shrink-0">language</span>
             <div>
               <h4 class="text-white font-bold mb-2">Immigrant-Friendly</h4>
@@ -427,7 +437,7 @@
                 language that Canadian employers understand and value.</p>
             </div>
           </div>
-          <div class="flex gap-5 reveal">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-6 flex gap-5 reveal">
             <span class="material-symbols-outlined text-primary text-2xl mt-1 flex-shrink-0">groups</span>
             <div>
               <h4 class="text-white font-bold mb-2">Live Cohort + Community</h4>
@@ -435,7 +445,7 @@
                 real-time support, and build your professional network from day one.</p>
             </div>
           </div>
-          <div class="flex gap-5 reveal">
+          <div class="glass-card card-hover border border-white/5 rounded-lg p-6 flex gap-5 reveal">
             <span class="material-symbols-outlined text-primary text-2xl mt-1 flex-shrink-0">trending_up</span>
             <div>
               <h4 class="text-white font-bold mb-2">Expandable Career Path</h4>
@@ -454,14 +464,14 @@
       <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-6 text-center">
         <p class="text-white font-medium">Spots for the next cohort are limited.</p>
         <a href="#final-cta"
-          class="bg-primary text-background-dark px-8 py-3 text-sm font-bold rounded hover:scale-[1.02] transition-transform">
+          class="bg-primary text-background-dark px-8 py-3 text-sm font-bold rounded btn-glow hover:scale-[1.02] transition-all">
           JOIN THE WAITLIST →
         </a>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-32 bg-background-dark/50" id="faq">
+    <section class="py-32 bg-gradient-to-b from-background-dark to-[#1a1914]" id="faq">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-center mb-16">
           <p class="text-primary text-sm font-bold tracking-[0.2em] mb-4 uppercase reveal">Common Questions</p>
@@ -469,7 +479,7 @@
           <p class="text-slate-500 reveal">Everything you need to know before joining the waitlist.</p>
         </div>
         <div class="space-y-4">
-          <details class="group bg-background-dark/40 border border-white/5 rounded transition-all reveal">
+          <details class="group glass-card border border-white/5 rounded-lg transition-all reveal">
             <summary class="flex items-center justify-between p-6 cursor-pointer">
               <span class="text-white font-medium">Do I need any prior finance or compliance experience?</span>
               <span
@@ -479,7 +489,7 @@
               people with zero compliance experience. Whether you come from retail, hospitality, accounting, or any
               other background — the programme starts from scratch and takes you to job-ready.</div>
           </details>
-          <details class="group bg-background-dark/40 border border-white/5 rounded transition-all reveal">
+          <details class="group glass-card border border-white/5 rounded-lg transition-all reveal">
             <summary class="flex items-center justify-between p-6 cursor-pointer">
               <span class="text-white font-medium">I'm a newcomer to Canada. Will this help me specifically?</span>
               <span
@@ -490,7 +500,7 @@
               understand how Big 6 banks operate, and build the "Canadian experience" that employers look for — without
               needing a Canadian job first.</div>
           </details>
-          <details class="group bg-background-dark/40 border border-white/5 rounded transition-all reveal">
+          <details class="group glass-card border border-white/5 rounded-lg transition-all reveal">
             <summary class="flex items-center justify-between p-6 cursor-pointer">
               <span class="text-white font-medium">How long is the bootcamp and what's the format?</span>
               <span
@@ -501,7 +511,7 @@
               support. It's designed to be completed alongside a full-time job or other commitments. Exact programme
               length will be confirmed with your cohort intake.</div>
           </details>
-          <details class="group bg-background-dark/40 border border-white/5 rounded transition-all reveal">
+          <details class="group glass-card border border-white/5 rounded-lg transition-all reveal">
             <summary class="flex items-center justify-between p-6 cursor-pointer">
               <span class="text-white font-medium">How much will it cost?</span>
               <span
@@ -511,7 +521,7 @@
               Exact pricing will be announced to waitlist members first — and founding members will receive a
               significant discount not available after launch. Join the waitlist to be first in line.</div>
           </details>
-          <details class="group bg-background-dark/40 border border-white/5 rounded transition-all reveal">
+          <details class="group glass-card border border-white/5 rounded-lg transition-all reveal">
             <summary class="flex items-center justify-between p-6 cursor-pointer">
               <span class="text-white font-medium">Will this help me get a job at a Canadian bank?</span>
               <span
@@ -522,7 +532,7 @@
               cohorts have placed graduates at major banks and fintechs across Canada. We don't just teach theory; we
               prepare you for the exact interviews and assessments you'll face.</div>
           </details>
-          <details class="group bg-background-dark/40 border border-white/5 rounded transition-all reveal">
+          <details class="group glass-card border border-white/5 rounded-lg transition-all reveal">
             <summary class="flex items-center justify-between p-6 cursor-pointer">
               <span class="text-white font-medium">What if I join the waitlist but the cohort doesn't run?</span>
               <span
@@ -544,7 +554,20 @@
         <h2 class="serif-heading text-4xl md:text-5xl text-white mb-4">Reserve Your Spot</h2>
         <p class="text-slate-400 text-lg mb-10">Next cohort · Limited to 15 participants</p>
 
-        <div class="bg-background-dark border border-primary/20 p-10 rounded-xl">
+        <div class="bg-background-dark border border-primary/20 p-10 rounded-xl shadow-lg shadow-primary/5">
+          <!-- Trust Checklist -->
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-sm">
+            <span class="flex items-center gap-2 text-slate-400"><span
+                class="material-symbols-outlined text-primary text-base">check_circle</span>Live cohort +
+              mentorship</span>
+            <span class="flex items-center gap-2 text-slate-400"><span
+                class="material-symbols-outlined text-primary text-base">check_circle</span>Resume &amp; interview
+              prep</span>
+            <span class="flex items-center gap-2 text-slate-400"><span
+                class="material-symbols-outlined text-primary text-base">check_circle</span>CAMS certification
+              support</span>
+          </div>
+
           <!-- Cohort Info -->
           <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/5">
             <div class="text-left">
@@ -569,9 +592,9 @@
           <form class="space-y-3 mb-4" id="finalForm" novalidate>
             <input type="email" placeholder="Your email address" required id="finalEmail" name="email"
               aria-label="Email address"
-              class="w-full px-4 py-3.5 rounded bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30">
+              class="w-full px-4 py-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30">
             <select required id="finalSegment" name="segment" aria-label="I am a..."
-              class="w-full px-4 py-3.5 rounded bg-white/5 border border-white/10 text-slate-400 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 appearance-none">
+              class="w-full px-4 py-4 rounded-lg bg-white/5 border border-white/10 text-slate-400 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 appearance-none">
               <option value="" disabled selected>I am a...</option>
               <option value="Newcomer to Canada">Newcomer to Canada</option>
               <option value="Immigrant Professional">Immigrant Professional</option>
@@ -581,7 +604,7 @@
               <option value="Other">Other</option>
             </select>
             <button type="submit"
-              class="cta-btn w-full bg-primary text-background-dark py-4 text-base font-bold rounded hover:scale-[1.02] transition-transform">
+              class="cta-btn w-full bg-primary text-background-dark py-4 text-base font-bold rounded-lg btn-glow hover:scale-[1.02] transition-all">
               SECURE MY SPOT →
             </button>
           </form>
